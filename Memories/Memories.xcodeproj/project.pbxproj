@@ -16,6 +16,7 @@
 		A6FABCAD21124C410033C9C7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FABCAC21124C410033C9C7 /* OnboardingViewController.swift */; };
 		A6FABCAF21124DF20033C9C7 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FABCAE21124DF20033C9C7 /* MemoriesTableViewController.swift */; };
 		A6FABCB121124FD00033C9C7 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FABCB021124FD00033C9C7 /* MemoryDetailViewController.swift */; };
+		A6FABCB3211251220033C9C7 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FABCB2211251220033C9C7 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A6FABCAC21124C410033C9C7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A6FABCAE21124DF20033C9C7 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		A6FABCB021124FD00033C9C7 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		A6FABCB2211251220033C9C7 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				A6FABCA821123E130033C9C7 /* Memory.swift */,
 				A6FABCAA21123EF10033C9C7 /* MemoryController.swift */,
+				A6FABCB2211251220033C9C7 /* LocalNotificationHelper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				A6FABCB121124FD00033C9C7 /* MemoryDetailViewController.swift in Sources */,
 				A6FABCA921123E130033C9C7 /* Memory.swift in Sources */,
 				A6FABCAB21123EF20033C9C7 /* MemoryController.swift in Sources */,
+				A6FABCB3211251220033C9C7 /* LocalNotificationHelper.swift in Sources */,
 				A6FABCAF21124DF20033C9C7 /* MemoriesTableViewController.swift in Sources */,
 				A6FABC9421123D630033C9C7 /* AppDelegate.swift in Sources */,
 				A6FABCAD21124C410033C9C7 /* OnboardingViewController.swift in Sources */,
