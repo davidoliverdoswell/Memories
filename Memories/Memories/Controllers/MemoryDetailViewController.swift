@@ -55,6 +55,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
             memoryController.updateAMemory(memory: memory)
         } else if memory == nil {
             guard let newText = textField.text, let newView = textView.text, let newImage = UIImagePNGRepresentation(imageView.image!) as Data? else { return}
+            
             memoryController.createAMemory(title: newText, bodyText: newView, imageData: newImage)
         }
         memoryController.saveToPersistentStore()
