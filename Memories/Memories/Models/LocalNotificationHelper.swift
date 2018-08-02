@@ -23,7 +23,8 @@ class LocalNotificationHelper {
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             
-            if let error = error { NSLog("Error requesting authorization status for local notifications: \(error)") }
+            if let error = error {
+                NSLog("Error requesting authorization status for local notifications: \(error)") }
             
             DispatchQueue.main.async {
                 completion(success)
@@ -51,11 +52,5 @@ class LocalNotificationHelper {
             }
         }
     }
-    
-    
-    
-    
-    
-    
     
 }

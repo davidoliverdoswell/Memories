@@ -18,7 +18,12 @@ private let actionTitle = "Okay"
 
 class MemoryDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var memory : Memory?
+    var memory : Memory? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     var memoryController = MemoryController()
     
     @IBOutlet weak var imageView: UIImageView!
@@ -46,7 +51,14 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     @IBAction func savePhotoButton(_ sender: Any) {
+        if let memory = memory {
+            memoryController.updateAMemory(memory: memory)
+        } else if memory == nil {
+            guard let newText = textField.text, let newView = textView.text, let newImage = UIImagePNGRepresentation(imageView.image!) as Data? else { return}
+            memoryController.createAMemory(title: newText, bodyText: newView, imageData: newImage)
+        }
         memoryController.saveToPersistentStore()
+        navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
@@ -78,6 +90,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageView.contentMode = .scaleAspectFit
         imageView.image = image
         
         picker.dismiss(animated: true, completion: nil)

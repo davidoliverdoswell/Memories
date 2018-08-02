@@ -14,6 +14,9 @@ class MemoriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        memoryController.loadFromPersistentStore()
+        print("Got data")
     }
     
     override func viewWillAppear(_ animated: Bool) {

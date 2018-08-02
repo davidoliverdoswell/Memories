@@ -70,9 +70,4 @@ class MemoryController {
         memories.remove(at: index)
         saveToPersistentStore()
     }
-    
-    
-    
-    
-    
 }

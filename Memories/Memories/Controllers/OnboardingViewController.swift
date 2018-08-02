@@ -14,13 +14,10 @@ class OnboardingViewController: UIViewController {
     
     @IBAction func getStarted(_ sender: Any) {
         localNotificationHelper.requestAuthorization { (success) in
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "showMaster", sender: nil)
+            }
             self.localNotificationHelper.scheduleDailyReminderNotification()
-        }
-    }
-    
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "showMaster", sender: nil)
         }
     }
     
